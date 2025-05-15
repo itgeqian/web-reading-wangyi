@@ -23,30 +23,46 @@ body {
 
 /* 导航开始 */
 .top-nav {
-    background-color: #fff;
+    background-color: transparent;
     min-width: 1200px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: none;
     padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 
 .top-nav a {
     color: #666;
     text-decoration: none;
-    padding: 0 20px;
-    font-size: 14px;
+    padding: 0 15px;
+    font-size: 12px;
     transition: color 0.3s ease;
+    position: relative;
 }
 
 .top-nav a:hover {
     color: #1890ff;
 }
 
+.top-nav a:not(:last-child):after {
+    content: "|";
+    position: absolute;
+    right: -2px;
+    color: #e5e5e5;
+}
+
 .top-nav-left {
     float: left;
+    margin-top: -10px;
 }
 
 .top-nav-right {
     float: right;
+    margin-top: -10px;
+}
+
+.top-nav-right a {
+    padding: 0 10px;
 }
 
 /* logo搜索开始 */
@@ -156,9 +172,6 @@ body {
     box-sizing: border-box;
 }
 
-
-
-
 .zhuti-nav-left-neirong h3 {
     color: #333;
     margin: 15px 0 5px 0; /* 上15px，右0，下5px，左0 */
@@ -211,7 +224,6 @@ body {
     display: flex;
     align-items: stretch;
 }
-
 
 .zhuti-nav-right img {
     width: 100%;
